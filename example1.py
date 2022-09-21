@@ -73,6 +73,9 @@ async def run(playwright: Playwright) -> None:
 
     await page.click()
 
+    box = await page.locator("#keyWord").bounding_box()
+    print(box)
+
     await page.wait_for_timeout(3000)
     await context.close()
     await browser.close()

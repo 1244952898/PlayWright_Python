@@ -46,6 +46,7 @@ class TestDemo:
 
     def test_addAddress(self):
         page = self.browser.new_page()
+        self.test_login("18710098386","123456")
         page.click("//div[@class='md1200']/div[@class='lginfo pcshow']/a[1]")
         page.wait_for_url("https://maomaoyu.com.au/UserCenter/Index")
         page.click("text=收货人管理")
